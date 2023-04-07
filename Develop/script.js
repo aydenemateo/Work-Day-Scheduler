@@ -1,3 +1,7 @@
+const saveButton = document.getElementById('saveButton');
+const timeDisplayEl = $('#time-display');
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -11,11 +15,16 @@ $(function () {
   // useful when saving the description in local storage?
 
 $(function () {
-  $('.btn').click (function() {
+  $("#saveButton").click (function() {
     console.log()= ("#text-box1");
   });
 
 });
+
+function displayTime() {
+  var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
+  timeDisplayEl.text(rightNow);
+}
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
