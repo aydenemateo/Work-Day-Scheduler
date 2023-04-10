@@ -20,6 +20,7 @@ $(function () {
   }
 
   var currentHour = dayjs().hour();
+  currentHour = 14;
   $('.time-block').each(function () {
     var blockHour = parseInt($(this).attr('id').split('-')[1])
     if (blockHour < currentHour) {
@@ -33,17 +34,3 @@ $(function () {
     }
   });
 });
-
-
-
-//Put date at top of calendar
-
-//Add time slots for standard business hours
-
-// Color code time slots
-
-//Click into a timeblock and enter event
-
-//Save events in local storege
-
-//Save events after refresh
